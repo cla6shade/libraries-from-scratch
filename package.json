@@ -9,6 +9,16 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "main": "./dist/libraries-from-scratch.umd.js",
+  "module": "./dist/libraries-from-scratch.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/libraries-from-scratch.js",
+      "require": "./dist/libraraies-from-scratch.umd.cjs"
+    }
+  },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -26,6 +36,8 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1",
+    "vite-plugin-dts": "^4.0.3",
     "vitest": "^2.0.5"
-  }
+  },
+  "packageManager": "yarn@4.4.1"
 }
